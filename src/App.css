@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+.card {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    border: 0.04rem solid rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.5s linear !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th, .highlight {
+    padding: 4px;
+    background-color: rgba(247, 247, 249, 0.3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+hr {
+    background-color: #4f5f76;
 }
 
-.App-link {
-  color: #61dafb;
+.form-control {
+    color: #12343b !important;
+    border: none !important;
+    border-bottom: 2px solid #4f5f76 !important;
+    background-color: rgba(247, 247, 249, 0.3) !important;
+    transition: all 0.5s linear !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control:focus {
+    background-color: #edf7f6 !important;
+}
+
+input:valid {
+    background-color: #edf7f6 !important;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #1b5384;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
