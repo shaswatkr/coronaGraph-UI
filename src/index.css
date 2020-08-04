@@ -1,9 +1,8 @@
 body {
-    background-image: url(./assets/bgOperation.jpg);
+    background-image: url(./assets/medicine.jpg);
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
+    font-family: 'Raleway', sans-serif !important;
+    color: #494d5f !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

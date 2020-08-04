@@ -1,72 +1,140 @@
 import React, { Component } from "react";
+import { GraphContext } from "../context";
 
 class AddNode extends Component {
-    state = {};
+    static contextType = GraphContext;
 
-    checkStatus = function () {
-        console.log("Here");
+    state = {
+        name: "",
+        ssn: "",
+        address: "",
+        address2: "",
+        state: "",
+        city: "",
+        zip: "",
+        covidPositive: "",
+        symptoms: ""
+    }
 
-    };
+    handleChange = (event) => {
+        let name = event.target.name;
+        let value = event.target.value;
+        this.setState({ [name]: value });
+    }
+
+    handleSubmit = () => {
+        console.log(
+            this.state.name + ", " +
+            this.state.ssn + ", " +
+            this.state.address + ", " +
+            this.state.address2 + ", " +
+            this.state.state + ", " +
+            this.state.city + ", " +
+            this.state.zip + ", " +
+            this.state.covidPositive + ", " +
+            this.state.symptoms
+        );
+    }
 
     render() {
+        const {
+            cityArray
+        } = this.context;
+
         return (
             <div className="container my-4">
                 <div className="card">
                     <div className="card-body p-4">
                         <form className="was-validated">
-                            <h4 className="card-title"> Add new Node </h4>
+                            <h3 className="card-title"> Add new Node </h3>
                             <hr />
 
                             <div className="form-row">
                                 <div className="form-group col-md-6">
-                                    <label htmlFor="inputEmail4">Email</label>
-                                    <input type="email" className="form-control" id="inputEmail4" placeholder="Email" required />
+                                    <label htmlFor="name"> Name </label>
+                                    <input type="text" className="form-control" name="name" onChange={this.handleChange} placeholder="Who are you??" required />
                                 </div>
                                 <div className="form-group col-md-6">
-                                    <label htmlFor="inputPassword4">Password</label>
-                                    <input type="text" className="form-control" id="inputPassword4" placeholder="Password" required />
+                                    <label htmlFor="ssn"> SSN </label>
+                                    <input type="text" className="form-control" name="ssn" onChange={this.handleChange} placeholder="SSN" required />
                                 </div>
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="inputAddress">Address</label>
-                                <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" required />
+                                <label htmlFor="address"> Address </label>
+                                <input type="text" className="form-control" name="address" onChange={this.handleChange} placeholder="1234 Main St" required />
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="inputAddress2">Address 2</label>
-                                <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" required />
+                                <label htmlFor="address2"> Address 2 </label>
+                                <input type="text" className="form-control" name="address2" onChange={this.handleChange} placeholder="Apartment, studio, or floor" required />
                             </div>
 
                             <div className="form-row">
                                 <div className="form-group col-md-6">
-                                    <label htmlFor="inputCity">City</label>
-                                    <input type="text" className="form-control" id="inputCity" required />
+                                    <label htmlFor="state"> State </label>
+                                    <select name="state" className="custom-select" onChange={this.handleChange} required>
+                                        {Object.keys(cityArray).map(state => {
+                                            if (state === "Choose State....")
+                                                return <option key="" value=""> {state} </option>
+                                            else
+                                                return <option key={state} value={state}> {state} </option>
+                                        })}
+                                    </select>
                                 </div>
 
                                 <div className="form-group col-md-4">
-                                    <label htmlFor="inputState">State</label>
-                                    <select id="inputState" className="form-control" required>
-                                        <option value="">Choose...</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                    <label htmlFor="city"> City </label>
+                                    <select name="city" className="custom-select" onChange={this.handleChange} disabled={this.state.state === "" ? true : false} required>
+                                        {this.state.state === "" ?
+                                            <option value=""> Select State for dropdown </option>
+                                            :
+                                            cityArray[this.state.state].map(city => <option key={city} value={city}> {city} </option>)
+                                        }
                                     </select>
                                 </div>
 
                                 <div className="form-group col-md-2">
-                                    <label htmlFor="inputZip">Zip</label>
-                                    <input type="text" className="form-control" id="inputZip" required />
+                                    <label htmlFor="zip"> Zip </label>
+                                    <input type="text" className="form-control" name="zip" onChange={this.handleChange} required />
                                 </div>
                             </div>
+
+                            <div className="form-row">
+                                <div className="form-group col-md-6">
+                                    <label htmlFor="covidPositive"> Covid Infected?? </label>
+                                    <div className="custom-control custom-radio">
+                                        <input type="radio" className="custom-control-input" name="covidPositive" onChange={this.handleChange} value="yes" id="covidYes" required />
+                                        <label className="custom-control-label" htmlFor="covidYes"> Yes </label>
+                                    </div>
+                                    <div className="custom-control custom-radio mb-3">
+                                        <input type="radio" className="custom-control-input" name="covidPositive" onChange={this.handleChange} value="no" id="covidNo" required />
+                                        <label className="custom-control-label" htmlFor="covidNo"> No </label>
+                                    </div>
+                                </div>
+
+
+                                <div className="form-group col-md-6">
+                                    <label htmlFor="symptoms"> Showing Symptoms?? </label>
+                                    <div className="custom-control custom-radio">
+                                        <input type="radio" className="custom-control-input" name="symptoms" onChange={this.handleChange} value="yes" id="symptomsYes" required />
+                                        <label className="custom-control-label" htmlFor="symptomsYes"> Yes </label>
+                                    </div>
+                                    <div className="custom-control custom-radio">
+                                        <input type="radio" className="custom-control-input" name="symptoms" onChange={this.handleChange} value="no" id="symptomsNo" required />
+                                        <label className="custom-control-label" htmlFor="symptomsNo"> No </label>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div className="form-group">
-                                <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" id="gridCheck" required />
-                                    <label className="form-check-label" htmlFor="gridCheck" > All Data Provided by me is correct </label>
+                                <div className="custom-control custom-checkbox mb-3">
+                                    <input className="custom-control-input" type="checkbox" id="gridCheck" required />
+                                    <label className="custom-control-label" htmlFor="gridCheck" > I agree that all Data provided by me above is correct </label>
                                 </div>
                             </div>
-                            {/* <button onClick={this.checkStatus} type="submit" className="btn btn-outline-info btn-lg btn-block"> Sign in </button> */}
-                            <button className="button btn-block btn-lg" style={{ verticalAlign: "middle" }}><span>Submit </span></button>
+
+                            <button onClick={this.handleSubmit} className="button btn-block btn-lg" style={{ verticalAlign: "middle" }}><span> Submit </span></button>
                         </form>
                     </div>
                 </div>
