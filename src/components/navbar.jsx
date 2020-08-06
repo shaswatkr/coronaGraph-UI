@@ -16,7 +16,7 @@ class Navbar extends Component {
                     <div className="navbar-nav">
                         <NavLink exact to="/dashboard" className="nav-item nav-link" activeClassName="active"> Home </NavLink>
                         <NavLink exact to="/dashboard/chart" className="nav-item nav-link" activeClassName="active"> Charts </NavLink>
-                        <NavLink to="/dashboard/add" className="nav-item nav-link" activeClassName="active"> Add New </NavLink>
+                        <NavLink to="/dashboard/add1" className="nav-item nav-link" activeClassName="active"> Add New </NavLink>
                         <NavLink to="/dashboard/profile" className="nav-item nav-link" activeClassName="active"> Profile </NavLink>
                     </div>
                 </div>

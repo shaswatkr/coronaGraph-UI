@@ -8,7 +8,6 @@ class AddNode extends Component {
         name: "",
         ssn: "",
         address: "",
-        address2: "",
         state: "",
         city: "",
         zip: "",
@@ -23,18 +22,44 @@ class AddNode extends Component {
     }
 
     handleSubmit = () => {
+        const { storeSSN } = this.context;
+
         console.log(
             this.state.name + ", " +
             this.state.ssn + ", " +
             this.state.address + ", " +
-            this.state.address2 + ", " +
             this.state.state + ", " +
             this.state.city + ", " +
             this.state.zip + ", " +
             this.state.covidPositive + ", " +
             this.state.symptoms
         );
+
+        let ssn = this.state.ssn;
+        let name = this.state.name;
+        let address = this.state.address + ", " + this.state.city + ", " + this.state.state + ", " + this.state.zip;
+        let showingSymptoms = this.state.symptoms;
+        let covidInfected = this.state.covidPositive
+
+        fetch("http://localhost:61089/api/Graph/AddPersonNode?ssn=" + ssn + "&name=" + name + "&address=" + address + "&showingSymptoms=" + showingSymptoms + "&covidInfected=" + covidInfected, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then((res) => res.json())
+            .then((result) => {
+                console.log(result);
+            })
+            .catch(({ message }) => {
+                console.log(message);
+            })
+
+        storeSSN(this.state.ssn);
+
+        this.props.history.push('/dashboard/add2')
     }
+
 
     render() {
         const {
@@ -42,10 +67,10 @@ class AddNode extends Component {
         } = this.context;
 
         return (
-            <div className="container my-4">
+            <div className="container my-4" >
                 <div className="card">
                     <div className="card-body p-4">
-                        <form className="was-validated">
+                        <div className="was-validated">
                             <h3 className="card-title"> Add new Node </h3>
                             <hr />
 
@@ -63,11 +88,6 @@ class AddNode extends Component {
                             <div className="form-group">
                                 <label htmlFor="address"> Address </label>
                                 <input type="text" className="form-control" name="address" onChange={this.handleChange} placeholder="1234 Main St" required />
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="address2"> Address 2 </label>
-                                <input type="text" className="form-control" name="address2" onChange={this.handleChange} placeholder="Apartment, studio, or floor" required />
                             </div>
 
                             <div className="form-row">
@@ -134,8 +154,8 @@ class AddNode extends Component {
                                 </div>
                             </div>
 
-                            <button onClick={this.handleSubmit} className="button btn-block btn-lg" style={{ verticalAlign: "middle" }}><span> Submit </span></button>
-                        </form>
+                            <button onClick={this.handleSubmit} className="button btn-block btn-lg" style={{ verticalAlign: "middle" }}><span> Proceed </span></button>
+                        </div>
                     </div>
                 </div>
             </div>

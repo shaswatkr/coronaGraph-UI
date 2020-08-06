@@ -1,0 +1,151 @@
+SSN,Name,Address,ShowingSymptoms,CovidInfected
+ZGKLA5287H,Madhav Nilufar,"Street Address,Country",TRUE,TRUE
+DAJPC4150P,Abhra Smirti,"Monroe Street,India",FALSE,FALSE
+XGZFE7225A,Magan Nageshwar,"Franklin Avenue,India",FALSE,TRUE
+CTUGE1616I,Gulab Umesh Reba,"Country Club Road,India",FALSE,FALSE
+PEVFV4506Y,Shiv Rangarajan,"Maiden Lane,India",FALSE,FALSE
+UWPCL6780T,Satyakam Nishita Makarand,"Route 1,India",FALSE,FALSE
+LQDTD5444T,Sarat Rammohan,"White Street,India",FALSE,FALSE
+YUGFJ2046V,Vismay Suneina,"Cottage Street,India",FALSE,FALSE
+DDWCH0856B,Ikshu Vasudha,"King Street,India",FALSE,FALSE
+NLXBC1905E,Ankush Visvanathan,"Maiden Lane,India",TRUE,TRUE
+GFQJR7008X,Sudhir Chellappa,"Grand Avenue,India",FALSE,FALSE
+HAIBF2803J,Nikunj Keskar,"Laurel Drive,India",FALSE,TRUE
+PAOTD0722J,Arnav Gavarasana,"Pleasant Street,India",FALSE,TRUE
+YSNCH0058E,Ujala Vinita,"Ann Street,India",FALSE,FALSE
+KOAHM4127V,Hasit Fatik Honnenahalli,"Windsor Drive,India",FALSE,FALSE
+AALAE0983J,Lokesh Vaibhav Niradhara,"Essex Court,India",FALSE,FALSE
+IDKAU8404X,Shakunt Kity,"Crescent Street,India",FALSE,FALSE
+RCPLI5103X,Ishrat Prasanna,"River Street,India",FALSE,FALSE
+SJRGW6993R,Ranajit Naik,"Broad Street,India",FALSE,FALSE
+JBBLZ1931E,Sanat Kambhatla,"Forest Street,India",FALSE,FALSE
+FJECZ5248L,Manoj Rajaram,"Rose Street,India",FALSE,FALSE
+AEZJI0104B,Prashant Nathan,"Front Street North,India",FALSE,FALSE
+ROWTD0056J,Avanish Nirmal,"Front Street North,India",FALSE,FALSE
+YBVFO2576K,Utpal Rajivlochan Srivastava,"Arlington Avenue,India",FALSE,FALSE
+QUPFY1746K,Shashishekhar Narang,"Grand Avenue,India",FALSE,FALSE
+GTQFD6431B,Gautam Bhaskar,"Essex Court,India",FALSE,TRUE
+DRTFB7756K,Amoha Agarwal,"Briarwood Drive,India",FALSE,FALSE
+XJELO0342F,Navrang Surotama,"Garfield Avenue,India",FALSE,FALSE
+UHAHZ2587S,Dhananjay Sarasvan,"Crescent Street,India",FALSE,FALSE
+GKUPF4474T,Ganaraj Cheran,"Fairway Drive,India",FALSE,FALSE
+WLQFI7038P,Vallabh Gorawala,"King Street,India",FALSE,FALSE
+YRUHY0179Q,Acharya Mangesh,"Main Street,India",FALSE,FALSE
+GAGAH3245V,Akalmash Suvrata Duranjaya,"Linden Avenue,India",FALSE,FALSE
+YKWJC5903I,Lalitchandra Ankola,"Andover Court,India",FALSE,FALSE
+DTMCS6680V,Aditeya Somatra,"Summit Avenue,India",FALSE,FALSE
+DPABK1472L,Pyaremohan Mukunda,"Hanover Court,India",FALSE,FALSE
+ANVGQ8532K,Padmanabh Nishita,"Monroe Street,India",FALSE,TRUE
+MXJTH3636M,Sarang Giridhar,"Front Street North,India",FALSE,FALSE
+CNGLA9287F,Yogendra Neerja,"Cottage Street,India",FALSE,FALSE
+OKKJN0258I,Jalil Satin,"Grand Avenue,India",FALSE,FALSE
+QILTZ8532O,Nachiketa Mamta,"Windsor Drive,India",FALSE,FALSE
+JDAFT2161A,Rohitasva Chandan,"Fairway Drive,India",TRUE,FALSE
+KHWLF7897I,Sameer Darsha,"Laurel Lane,India",FALSE,TRUE
+AYOFH0376H,Raghav Shreenath,"Cottage Street,India",FALSE,FALSE
+WMGAR7012T,Lakshmikanta Medikonda,"Laurel Drive,India",FALSE,FALSE
+QQFAX1977U,Bhim Muthupalaniappan,"Maiden Lane,India",FALSE,FALSE
+UWLLT4061A,Alagarasu Vinit,"Highland Drive,India",FALSE,FALSE
+FXBJN0247N,Devarsi Keshava,"Fairway Drive,India",FALSE,FALSE
+SAMCR3642G,Kripal Titir Pooja,"Windsor Drive,India",FALSE,FALSE
+MLOBK0731T,Amitiyoti Mukherjee,"Briarwood Drive,India",FALSE,FALSE
+SSHFH7836L,Sanskriti Sritharan,"Arlington Avenue,India",FALSE,FALSE
+TGDGZ2038T,Veena Yellepeddy,"Madison Avenue,India",FALSE,FALSE
+PVDFE0951I,Shipra Pusan,"Fairway Drive,India",FALSE,FALSE
+KQRFG1545K,Sumanolata Swamy,"Grand Avenue,India",FALSE,FALSE
+YKZAB5013Z,Shishirkana Melliyal,"Andover Court,India",FALSE,FALSE
+UHZGS9242U,Neeharika Matanga,"Maiden Lane,India",FALSE,TRUE
+NVSTJ3272O,Shrabana Snigdha,"River Street,India",FALSE,FALSE
+DFFLO5270K,Keshika Maruti,"Atlantic Avenue,India",FALSE,FALSE
+OWOGB9261H,Rajshri Mackherdhuj,"Franklin Court,India",FALSE,FALSE
+FUAFH6837M,Madhura Manjanatha,"Ann Street,India",FALSE,FALSE
+VISGD9140Y,Yatee Maitreya,"Charles Street,India",FALSE,FALSE
+OLACF7728R,Nehal Sarat,"Woodland Drive,India",FALSE,FALSE
+NWIFJ1176T,Ratnaprabha Priyavardhan,"Andover Court,India",FALSE,FALSE
+OKEFL1710D,Kanti Sakib,"Charles Street,India",FALSE,FALSE
+WQKAY1139O,Saeeda Mallikarjun,"Crescent Street,India",FALSE,FALSE
+YRJFW2879O,Neela Narasinha,"Willow Avenue,India",FALSE,TRUE
+JNAGH5698O,Sutanuka Kosuri,"Garfield Avenue,India",FALSE,FALSE
+DEIGD3182O,Pratibha Vivek,"Cedar Avenue,India",FALSE,FALSE
+WGUCE0485T,Ura Konduru,"Cedar Lane,India",FALSE,FALSE
+TTALK7944X,Sujata Adani,"Monroe Street,India",FALSE,FALSE
+CQAHR7927I,Vijul Pritha,"Orchard Avenue,India",FALSE,FALSE
+HVDFY0514H,Sita Tuhin,"Route 1,India",FALSE,FALSE
+FBSGM0739Q,Anasuya Surati,"Route 1,India",FALSE,FALSE
+TQHPO8546V,Ayushmati Nagedwaran,"Crescent Street,India",FALSE,FALSE
+KPLGX2291E,Mehal Udaya,"Devon Court,India",FALSE,FALSE
+GDIBP5279W,Gazala Apte,"Country Club Road,India",FALSE,FALSE
+NRYCQ6432P,Snigdha Padmakant,"Laurel Drive,India",TRUE,TRUE
+HTHCS4756W,Paramita Nagaraja,"John Street,India",FALSE,FALSE
+QMCBE1005E,Joel Navya,"Pleasant Street,India",FALSE,FALSE
+UNPFQ7079J,Anshula Suryanarayanan,"Forest Street,India",FALSE,FALSE
+ZCZCT0125P,Udita Sudarshan,"Cedar Lane,India",FALSE,FALSE
+HBHFR8679R,Waheeda Ramasubraman,"Garfield Avenue,India",FALSE,FALSE
+LFEPK0917Y,Tarunima Ramamuthe,"White Street,India",FALSE,FALSE
+RSFJI1636U,Lona Seshadri,"Madison Avenue,India",FALSE,TRUE
+RCVBG4155T,Vipasa Nerurkar,"Clay Street,India",FALSE,FALSE
+EJUJE7871C,Surabhi Vadakke,"Devon Court,India",FALSE,FALSE
+EUSBZ5085S,Devaki Nartana,"Front Street North,India",FALSE,FALSE
+UGKPA0908W,Jahnavi Ashalata Yaksha,"Franklin Avenue,India",FALSE,FALSE
+KPNFS1126R,Chitrarekha Sahana Lath,"Orchard Avenue,India",FALSE,FALSE
+YHPGK3190Y,Ballari Motiwala,"Hanover Court,India",FALSE,FALSE
+YLCLU2197M,Aboil Manikkalingam,"Linden Avenue,India",FALSE,FALSE
+VLYBE4157N,Arunima Medapati,"Monroe Street,India",FALSE,FALSE
+MRZFU0871K,Dulari Chhavvi,"John Street,India",FALSE,FALSE
+OSHGB2787Y,Manikuntala Nageswar,"Hanover Court,India",FALSE,FALSE
+INCFO7502J,Amala Ghemawat,"Summit Avenue,India",FALSE,FALSE
+IFXCY5212W,Charulekha Tupil,"Forest Street,India",FALSE,FALSE
+DWOGF0901C,Shivangi Paveljit,"Olive Street,India",FALSE,FALSE
+VWSTG0688N,Saroja Hynala,"Essex Court,India",FALSE,FALSE
+KUDBD2558W,Naseen Piyush,"Cedar Lane,India",FALSE,FALSE
+UJSLN8410E,Kripa Ramadin,"Charles Street,India",FALSE,FALSE
+QSNFG5259Q,Amber Khursh,"Madison Avenue,India",FALSE,FALSE
+OPEHH4192O,Indivar Priyavardhan,"Crescent Street,India",TRUE,TRUE
+IJILL4462X,Deependra Santharam,"Briarwood Drive,India",FALSE,FALSE
+PMWJB5161H,Ambarish Kush Soumyabrata,"Garfield Avenue,India",FALSE,FALSE
+STJBH6935V,Yuvaraj Pramsu,"Linden Avenue,India",FALSE,FALSE
+RQNCY6637U,Dharmendra Lahan,"John Street,India",FALSE,FALSE
+SGJCL4010S,Indukanta Pankaj Ranga,"Forest Street,India",FALSE,FALSE
+QEQGE4833J,Prakat Charan,"Woodland Drive,India",FALSE,FALSE
+KJQJV7685E,Parmameshwar Jeevan,"Front Street North,India",FALSE,FALSE
+KPJPQ6641R,Sugreev Nagpal,"Cedar Avenue,India",FALSE,FALSE
+GDABP9486I,Preetish Ruchika,"Warren Avenue,India",FALSE,FALSE
+LFPCH2965C,Trivikram Suvrata,"Monroe Street,India",FALSE,TRUE
+SATTK8335I,Nripa Keerthi,"Olive Street,India",FALSE,FALSE
+NBKGE0582E,Jaichand Sabeer,"Garfield Avenue,India",FALSE,FALSE
+WHDLJ5834E,Niramay Gopinath,"Andover Court,India",FALSE,FALSE
+ISRPX5052D,Pragun Mrigendra Muthiah,"Maiden Lane,India",FALSE,FALSE
+NOBCG7622V,Sarat Sajal,"Jefferson Avenue,India",FALSE,FALSE
+IJTTX4808C,Abjayoni Chittibabu,"Charles Street,India",FALSE,FALSE
+HCCGZ0174P,Bhanudas Jayasinghe,"Forest Street,India",FALSE,FALSE
+AWBFH0855D,Mahabala Sudhindranath,"Pleasant Street,India",FALSE,FALSE
+BADCM0193J,Oorjit Ishan Sekar,"Atlantic Avenue,India",FALSE,TRUE
+KVBCX0303W,Bhaskar Chirag,"Hanover Court,India",FALSE,FALSE
+HNPFW2337S,Fatik Kambhatla,"Highland Drive,India",TRUE,TRUE
+WBXTW7604H,Atul Atulya Chakrabarti,"Warren Avenue,India",FALSE,FALSE
+CQNBT9019R,Ratan Tumkur,"Forest Street,India",FALSE,FALSE
+DQNPA7873J,Bankebihari Rakala,"Ann Street,India",FALSE,FALSE
+LFCTN1446P,Mrigendra Udit,"Atlantic Avenue,India",FALSE,TRUE
+NQTBK7795K,Aandaleeb Jagder,"King Street,India",FALSE,FALSE
+HVKAM7161C,Umrao Gujral,"Fairway Drive,India",FALSE,FALSE
+PWZBS9387T,Fanish Amarnath,"Williams Street,India",FALSE,FALSE
+AGPCB3705U,Devadas Varun,"Essex Court,India",FALSE,FALSE
+VANGI7545E,Navrang Nashier,"Arlington Avenue,India",FALSE,FALSE
+UTUHL1470G,Gurbachan Rasul Sathianarayan,"White Street,India",FALSE,FALSE
+LPRLY2520G,Chitrasen Thuraisingham,"Summit Avenue,India",FALSE,FALSE
+CFUTL2818U,Ramchandra Vijaysaradhi,"Essex Court,India",FALSE,FALSE
+YEJAG9353Q,Alagarasu Sumila,"Olive Street,India",FALSE,FALSE
+SABJQ6895V,Muralidhar Nuguru,"River Street,India",FALSE,TRUE
+QEHPG3612A,Jyotichandra Umrigar,"Laurel Lane,India",FALSE,FALSE
+LQQLI8065C,Abhisyanta Sankuratri,"Warren Avenue,India",FALSE,FALSE
+DKBFI9506L,Kandarpa Rakhi,"Orchard Avenue,India",FALSE,FALSE
+AFPLH2619Y,Pratik Vivekananda Sattar,"Garfield Avenue,India",FALSE,FALSE
+RABBV9445R,Chandrakanta Nirmal,"Summit Avenue,India",FALSE,FALSE
+OQFLS1069B,Savar Chidambaram,"Woodland Drive,India",FALSE,FALSE
+ERIPC1171E,Abhilash Mathrubootham,"Heather Lane,India",FALSE,FALSE
+WSZFC4585W,Jaisukh Shachi,"Ann Street,India",FALSE,FALSE
+QJGCN8376S,Pratul Sadhwani,"Arlington Avenue,India",FALSE,FALSE
+JFYTV3906X,Nirijhar Balamohan,"Cottage Street,India",FALSE,FALSE
+EXCPB1503P,Ananmaya Shivaprakash,"Court Street,India",FALSE,FALSE
+RNMAZ4119E,Meghnad Somansh Veeraraju,"Heather Lane,India",FALSE,FALSE
+VZEJA4128C,Misal Shinjinee,"Route 30,India",TRUE,TRUE

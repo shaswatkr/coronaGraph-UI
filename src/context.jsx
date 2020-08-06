@@ -4,6 +4,7 @@ const GraphContext = React.createContext();
 
 class GraphProvider extends Component {
     state = {
+        nodeSSN: "",
         cityArray: {
             "Choose State....": "",
             "Andaman & Nicobar": ["Alipur", "Andaman Island", "Anderson Island", "Arainj-Laka-Punga", "Austinabad", "Bamboo Flat", "Barren Island", "Beadonabad", "Betapur", "Bindraban", "Bonington", "Brookesabad", "Cadell Point", "Calicut", "Chetamale", "Cinque Islands", "Defence Island", "Digilpur", "Dolyganj", "Flat Island", "Geinyale", "Great Coco Island", "Haddo", "Havelock Island", "Henry Lawrence Island", "Herbertabad", "Hobdaypur", "Ilichar", "Ingoie", "Inteview Island", "Jangli Ghat", "Jhon Lawrence Island", "Karen", "Kartara", "KYD Islannd", "Landfall Island", "Little Andmand", "Little Coco Island", "Long Island", "Maimyo", "Malappuram", "Manglutan", "Manpur", "Mitha Khari", "Neill Island", "Nicobar Island", "North Brother Island", "North Passage Island", "North Sentinel Island", "Nothen Reef Island", "Outram Island", "Pahlagaon", "Palalankwe", "Passage Island", "Phaiapong", "Phoenix Island", "Port Blair", "Preparis Island", "Protheroepur", "Rangachang", "Rongat", "Rutland Island", "Sabari", "Saddle Peak", "Shadipur", "Smith Island", "Sound Island", "South Sentinel Island", "Spike Island", "Tarmugli Island", "Taylerabad", "Titaije", "Toibalawe", "Tusonabad", "West Island", "Wimberleyganj", "Yadita"],
@@ -41,21 +42,15 @@ class GraphProvider extends Component {
             "Uttar Pradesh": ["Achhnera", "Agra", "Akbarpur", "Aliganj", "Aligarh", "Allahabad", "Ambedkar Nagar", "Amethi", "Amiliya", "Amroha", "Anola", "Atrauli", "Auraiya", "Azamgarh", "Baberu", "Badaun", "Baghpat", "Bagpat", "Baheri", "Bahraich", "Ballia", "Balrampur", "Banda", "Bansdeeh", "Bansgaon", "Bansi", "Barabanki", "Bareilly", "Basti", "Bhadohi", "Bharthana", "Bharwari", "Bhogaon", "Bhognipur", "Bidhuna", "Bijnore", "Bikapur", "Bilari", "Bilgram", "Bilhaur", "Bindki", "Bisalpur", "Bisauli", "Biswan", "Budaun", "Budhana", "Bulandshahar", "Bulandshahr", "Capianganj", "Chakia", "Chandauli", "Charkhari", "Chhata", "Chhibramau", "Chirgaon", "Chitrakoot", "Chunur", "Dadri", "Dalmau", "Dataganj", "Debai", "Deoband", "Deoria", "Derapur", "Dhampur", "Domariyaganj", "Dudhi", "Etah", "Etawah", "Faizabad", "Farrukhabad", "Fatehpur", "Firozabad", "Garauth", "Garhmukteshwar", "Gautam Buddha Nagar", "Ghatampur", "Ghaziabad", "Ghazipur", "Ghosi", "Gonda", "Gorakhpur", "Gunnaur", "Haidergarh", "Hamirpur", "Hapur", "Hardoi", "Harraiya", "Hasanganj", "Hasanpur", "Hathras", "Jalalabad", "Jalaun", "Jalesar", "Jansath", "Jarar", "Jasrana", "Jaunpur", "Jhansi", "Jyotiba Phule Nagar", "Kadipur", "Kaimganj", "Kairana", "Kaisarganj", "Kalpi", "Kannauj", "Kanpur", "Karchhana", "Karhal", "Karvi", "Kasganj", "Kaushambi", "Kerakat", "Khaga", "Khair", "Khalilabad", "Kheri", "Konch", "Kumaon", "Kunda", "Kushinagar", "Lalganj", "Lalitpur", "Lucknow", "Machlishahar", "Maharajganj", "Mahoba", "Mainpuri", "Malihabad", "Mariyahu", "Math", "Mathura", "Mau", "Maudaha", "Maunathbhanjan", "Mauranipur", "Mawana", "Meerut", "Mehraun", "Meja", "Mirzapur", "Misrikh", "Modinagar", "Mohamdabad", "Mohamdi", "Moradabad", "Musafirkhana", "Muzaffarnagar", "Nagina", "Najibabad", "Nakur", "Nanpara", "Naraini", "Naugarh", "Nawabganj", "Nighasan", "Noida", "Orai", "Padrauna", "Pahasu", "Patti", "Pharenda", "Phoolpur", "Phulpur", "Pilibhit", "Pitamberpur", "Powayan", "Pratapgarh", "Puranpur", "Purwa", "Raibareli", "Rampur", "Ramsanehi Ghat", "Rasara", "Rath", "Robertsganj", "Sadabad", "Safipur", "Sagri", "Saharanpur", "Sahaswan", "Sahjahanpur", "Saidpur", "Salempur", "Salon", "Sambhal", "Sandila", "Sant Kabir Nagar", "Sant Ravidas Nagar", "Sardhana", "Shahabad", "Shahganj", "Shahjahanpur", "Shikohabad", "Shravasti", "Siddharthnagar", "Sidhauli", "Sikandra Rao", "Sikandrabad", "Sitapur", "Siyana", "Sonbhadra", "Soraon", "Sultanpur", "Tanda", "Tarabganj", "Tilhar", "Unnao", "Utraula", "Varanasi", "Zamania "],
             "Uttaranchal": ["Almora", "Bageshwar", "Bhatwari", "Chakrata", "Chamoli", "Champawat", "Dehradun", "Deoprayag", "Dharchula", "Dunda", "Haldwani", "Haridwar", "Joshimath", "Karan Prayag", "Kashipur", "Khatima", "Kichha", "Lansdown", "Munsiari", "Mussoorie", "Nainital", "Pantnagar", "Partapnagar", "Pauri Garhwal", "Pithoragarh", "Purola", "Rajgarh", "Ranikhet", "Roorkee", "Rudraprayag", "Tehri Garhwal", "Udham Singh Nagar", "Ukhimath", "Uttarkashi "],
             "West Bengal": ["zAdra", "Alipurduar", "Amlagora", "Arambagh", "Asansol", "Balurghat", "Bankura", "Bardhaman", "Basirhat", "Berhampur", "Bethuadahari", "Birbhum", "Birpara", "Bishanpur", "Bolpur", "Bongoan", "Bulbulchandi", "Burdwan", "Calcutta", "Canning", "Champadanga", "Contai", "Cooch Behar", "Daimond Harbour", "Dalkhola", "Dantan", "Darjeeling", "Dhaniakhali", "Dhuliyan", "Dinajpur", "Dinhata", "Durgapur", "Gangajalghati", "Gangarampur", "Ghatal", "Guskara", "Habra", "Haldia", "Harirampur", "Harishchandrapur", "Hooghly", "Howrah", "Islampur", "Jagatballavpur", "Jalpaiguri", "Jhalda", "Jhargram", "Kakdwip", "Kalchini", "Kalimpong", "Kalna", "Kandi", "Karimpur", "Katwa", "Kharagpur", "Khatra", "Krishnanagar", "Mal Bazar", "Malda", "Manbazar", "Mathabhanga", "Medinipur", "Mekhliganj", "Mirzapur", "Murshidabad", "Nadia", "Nagarakata", "Nalhati", "Nayagarh", "Parganas", "Purulia", "Raiganj", "Rampur Hat", "Ranaghat", "Seharabazar", "Siliguri", "Suri", "Takipur", "Tamluk"]
-        }
+        },
     }
 
-    // cityOption = (city_index) => {
-    //     option_str.length = 0;
-    //     // option_str.options[0] = new Option('Select City', '');
-    //     // option_str.selectedIndex = 0;
-    //     var selectedCity = cityArray[city_index].split("|");
-    //     // for (var i = 0; i < selectedCity.length; i++) {
-    //     //     option_str.options[option_str.length] = new Option(selectedCity[i], selectedCity[i]);
-    //     return selectedCity;
-    // }
+    storeSSN = (SSN) => {
+        this.setState({ nodeSSN: SSN });
+    }
 
     render() {
-        return (<GraphContext.Provider value={{ ...this.state }}>
+        return (<GraphContext.Provider value={{ ...this.state, storeSSN: this.storeSSN }}>
             {this.props.children}
         </GraphContext.Provider>);
     }

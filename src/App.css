@@ -26,7 +26,7 @@ table {
 
 th, .highlight {
     padding: 5px;
-    background-color: rgba(247, 247, 249, 0.8);
+    background-color: rgba(247, 247, 249, 0.7);
 }
 
 hr {
@@ -85,6 +85,14 @@ select:disabled {
 
 .button span:after {
     content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.addMore span::after {
+    content: '\002b' !important;
     position: absolute;
     opacity: 0;
     top: 0;
