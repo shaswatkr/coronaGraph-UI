@@ -8,6 +8,7 @@ import Profile from "./components/profile";
 import Navbar from "./components/navbar";
 import Chart from "./components/chart";
 import AddRelation from "./components/addRelation";
+import AddLocation from "./components/addLocation";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                         <Route exact path={"/dashboard/chart"} component={Chart} />
                         <Route exact path={"/dashboard/add1"} component={AddNode} />
                         <Route exact path={"/dashboard/add2"} component={AddRelation} />
+                        <Route exact path={"/dashboard/add3"} component={AddLocation} />
                         <Route exact pate={"/dashboard/profile"} component={Profile} />
                     </Switch>
                 </Route>

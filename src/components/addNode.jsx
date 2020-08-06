@@ -22,8 +22,6 @@ class AddNode extends Component {
     }
 
     handleSubmit = () => {
-        const { storeSSN } = this.context;
-
         console.log(
             this.state.name + ", " +
             this.state.ssn + ", " +
@@ -39,7 +37,7 @@ class AddNode extends Component {
         let name = this.state.name;
         let address = this.state.address + ", " + this.state.city + ", " + this.state.state + ", " + this.state.zip;
         let showingSymptoms = this.state.symptoms;
-        let covidInfected = this.state.covidPositive
+        let covidInfected = this.state.covidPositive;
 
         fetch("http://localhost:61089/api/Graph/AddPersonNode?ssn=" + ssn + "&name=" + name + "&address=" + address + "&showingSymptoms=" + showingSymptoms + "&covidInfected=" + covidInfected, {
             method: "POST",
@@ -55,9 +53,9 @@ class AddNode extends Component {
                 console.log(message);
             })
 
-        storeSSN(this.state.ssn);
+        localStorage.setItem("ssn", ssn);
 
-        this.props.history.push('/dashboard/add2')
+        this.props.history.push('/dashboard/add2');
     }
 
 
@@ -124,12 +122,12 @@ class AddNode extends Component {
                                 <div className="form-group col-md-6">
                                     <label htmlFor="covidPositive"> Covid Infected?? </label>
                                     <div className="custom-control custom-radio">
-                                        <input type="radio" className="custom-control-input" name="covidPositive" onChange={this.handleChange} value="yes" id="covidYes" required />
-                                        <label className="custom-control-label" htmlFor="covidYes"> Yes </label>
+                                        <input type="radio" className="custom-control-input" name="covidPositive" onChange={this.handleChange} value="TRUE" id="covidYes" required />
+                                        <label className="custom-control-label" htmlFor="covidYes"> True </label>
                                     </div>
                                     <div className="custom-control custom-radio mb-3">
-                                        <input type="radio" className="custom-control-input" name="covidPositive" onChange={this.handleChange} value="no" id="covidNo" required />
-                                        <label className="custom-control-label" htmlFor="covidNo"> No </label>
+                                        <input type="radio" className="custom-control-input" name="covidPositive" onChange={this.handleChange} value="FALSE" id="covidNo" required />
+                                        <label className="custom-control-label" htmlFor="covidNo"> False </label>
                                     </div>
                                 </div>
 
@@ -137,12 +135,12 @@ class AddNode extends Component {
                                 <div className="form-group col-md-6">
                                     <label htmlFor="symptoms"> Showing Symptoms?? </label>
                                     <div className="custom-control custom-radio">
-                                        <input type="radio" className="custom-control-input" name="symptoms" onChange={this.handleChange} value="yes" id="symptomsYes" required />
-                                        <label className="custom-control-label" htmlFor="symptomsYes"> Yes </label>
+                                        <input type="radio" className="custom-control-input" name="symptoms" onChange={this.handleChange} value="TRUE" id="symptomsYes" required />
+                                        <label className="custom-control-label" htmlFor="symptomsYes"> True </label>
                                     </div>
                                     <div className="custom-control custom-radio">
-                                        <input type="radio" className="custom-control-input" name="symptoms" onChange={this.handleChange} value="no" id="symptomsNo" required />
-                                        <label className="custom-control-label" htmlFor="symptomsNo"> No </label>
+                                        <input type="radio" className="custom-control-input" name="symptoms" onChange={this.handleChange} value="FALSE" id="symptomsNo" required />
+                                        <label className="custom-control-label" htmlFor="symptomsNo"> False </label>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +152,7 @@ class AddNode extends Component {
                                 </div>
                             </div>
 
-                            <button onClick={this.handleSubmit} className="button btn-block btn-lg" style={{ verticalAlign: "middle" }}><span> Proceed </span></button>
+                            <button onClick={this.handleSubmit} className="button btn-block btn-lg" style={{ verticalAlign: "middle" }}><span> Proceed to Page 2 </span></button>
                         </div>
                     </div>
                 </div>

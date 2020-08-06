@@ -7,8 +7,7 @@ class AddRelation extends Component {
 
     state = {
         personSSN: "",
-        personLOC: "",
-        dateMet: "",
+        personMet: [],
         person: []
     }
 
@@ -28,15 +27,24 @@ class AddRelation extends Component {
     }
 
     handleSubmit = (param) => {
-        const { nodeSSN } = this.context;
-        console.log(nodeSSN + ", " + this.state.personSSN + ", " + this.state.personLOC + ", " + this.state.dateMet);
+        let nodeSSN = localStorage.getItem("ssn");
+        console.log(nodeSSN + ", " + this.state.personSSN);
+
+        let tempPerson = [...this.state.person];
+        var person;
+        tempPerson.map(
+            per => {
+                if (per.SSN === this.state.personSSN)
+                    person = per.Name;
+            }
+        )
+
+        this.state.personMet.push(person);
 
         let ssn1 = this.state.personSSN;
         let ssn2 = nodeSSN;
-        let location = this.state.personLOC;
-        let date = this.state.dateMet;
 
-        fetch("http://localhost:61089/api/Graph/CreateVisitRelationship?ssn1=" + ssn1 + "&ssn2=" + ssn2 + "&locationId=" + location + "&dateVisited=" + date, {
+        fetch("http://localhost:61089/api/Graph/CreateInteractsWithRelationship?ssn1=" + ssn1 + "&ssn2=" + ssn2, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +61,7 @@ class AddRelation extends Component {
         if (param === "more")
             this.props.history.push('/dashboard/add2')
         else
-            this.props.history.push('/dashboard')
+            this.props.history.push('/dashboard/add3')
     }
 
     render() {
@@ -65,32 +73,21 @@ class AddRelation extends Component {
                             <h3 className="card-title"> Covid Relationship Data </h3>
                             <hr />
 
-                            <div className="form-row">
-                                <div className="form-group col-md-5">
-                                    <label htmlFor="personSSN"> Person Met </label>
-                                    <select name="personSSN" className="custom-select" onChange={this.handleChange} required>
-                                        <option value=""> Whom did you Meet???? </option>
-                                        {this.state.person.map(person => <option key={person.SSN} value={person.SSN}> {person.Name} </option>)}
-                                    </select>
-                                </div>
-
-                                <div className="form-group col-md-4">
-                                    <label htmlFor="personLOC"> Location </label>
-                                    <select name="personLOC" className="custom-select" onChange={this.handleChange} required>
-                                        <option value=""> Where did you Meet???? </option>
-                                        {this.state.person.map(person => <option key={person.SSN} value={person.Address}> {person.Address} </option>)}
-                                    </select>
-                                </div>
-
-                                <div className="form-group col-md-3">
-                                    <label htmlFor="dateMet"> Date Met </label>
-                                    <input type="date" className="form-control" name="dateMet" onChange={this.handleChange} required />
-                                </div>
+                            <div className="form-group">
+                                <label htmlFor="personSSN"> Person Met </label>
+                                <ul class="list-group">
+                                    {this.state.personMet.map(person => <li class="list-group-item" key={person}> {person} </li>)}
+                                </ul>
+                                <br />
+                                <select name="personSSN" className="custom-select" onChange={this.handleChange} required>
+                                    <option value=""> Whom did you Meet???? </option>
+                                    {this.state.person.map(person => <option key={person.SSN} value={person.SSN}> {person.Name} </option>)}
+                                </select>
                             </div>
 
                             <div className="row">
                                 <button onClick={() => this.handleSubmit("more")} className="addMore col-md-6 button btn-block btn-lg" style={{ verticalAlign: "middle" }}><span> Add more </span></button>
-                                <button onClick={() => this.handleSubmit("done")} className="col-md button btn-block btn-lg btn-success" style={{ verticalAlign: "middle" }}><span> Done </span></button>
+                                <button onClick={() => this.handleSubmit("done")} className="col-md button btn-block btn-lg btn-success" style={{ verticalAlign: "middle" }}><span> Proceed to Page 3 </span></button>
                             </div>
                         </div>
                     </div>
