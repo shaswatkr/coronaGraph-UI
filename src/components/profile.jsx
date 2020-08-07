@@ -67,64 +67,75 @@ class Profile extends Component {
             <div className="container my-4">
                 <div className="card ml-2">
                     <div className="card-body">
-                        <h4 className="card-title"> Search Details </h4>
+                        <h4 className="card-title"> Personal Details </h4>
                         <hr />
 
-                        <div class="card-body">
-                            {this.state.nodeDetail.map((person, index) => {
-                                return (
-                                    <div key={index}>
-                                        <div className="row">
-                                            <div className="col">
-                                                <h5 class="card-title"> Name: {person.name} </h5>
-                                                <h6 class="card-title"> SSN: ({person.ssn}) </h6>
-                                                <h6 class="card-title"> Address: {person.address} </h6>
-                                                <h5 class="card-title">
-                                                    Showing Symptoms:
+                        {
+                            this.state.nodeDetail.length !== 0 ?
+                                <>
+                                    <div class="card-body">
+                                        {this.state.nodeDetail.map((person, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    <div className="row">
+                                                        <div className="col">
+                                                            <h5 class="card-title"> Name: {person.name} </h5>
+                                                            <h6 class="card-title"> SSN: ({person.ssn}) </h6>
+                                                            <h6 class="card-title"> Address: {person.address} </h6>
+                                                            <h5 class="card-title">
+                                                                Showing Symptoms:
                                                     {
-                                                        person.showingSymptoms ?
-                                                            <span className="text-danger"> Yes </span>
-                                                            :
-                                                            <span className="text-success"> No </span>
-                                                    } </h5>
-                                            </div>
-                                            <div className="col">
-                                                <h2 class="card-title"> Risk Level: {this.state.risk} </h2>
-                                                <h3 className="card-title">
-                                                    Covid Infected:
+                                                                    person.showingSymptoms ?
+                                                                        <span className="text-danger"> Yes </span>
+                                                                        :
+                                                                        <span className="text-success"> No </span>
+                                                                } </h5>
+                                                        </div>
+                                                        <div className="col">
+                                                            <h2 class="card-title"> Risk Level: {this.state.risk} </h2>
+                                                            <h3 className="card-title">
+                                                                Covid Infected:
                                                     {
-                                                        person.covidInfected ?
-                                                            <span className="text-danger"> Yes </span>
-                                                            :
-                                                            <span className="text-success"> No </span>
-                                                    }
-                                                </h3>
-                                            </div>
-                                        </div>
+                                                                    person.covidInfected ?
+                                                                        <span className="text-danger"> Yes </span>
+                                                                        :
+                                                                        <span className="text-success"> No </span>
+                                                                }
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )
+                                        })}
+                                        <hr />
+                                        <h4 class="card-title"> Covid Infected People near you </h4>
                                     </div>
-                                )
-                            })}
-                            <hr />
-                            <h4 class="card-title"> Covid Infected People near you </h4>
-                        </div>
-                        <table className="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col"> Rank </th>
-                                    <th scope="col"> Name </th>
-                                    <th scope="col"> Address </th>
+                                    <table className="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"> Rank </th>
+                                                <th scope="col"> Name </th>
+                                                <th scope="col"> Address </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {this.state.nearestMostInfectedPersons.map((person, index) =>
+                                                <tr key={index}>
+                                                    <td> {index + 1} </td>
+                                                    <td> {person.name} </td>
+                                                    <td> {person.address} </td>
+                                                </tr>
+                                            )}
+                                        </tbody>
+                                    </table>
+                                </>
+                                :
+                                <tr class="text-center">
+                                    <td colspan="5" class="spinner-border" style={{ color: "#4f5f76", marginTop: "30%", marginLeft: "270%", marginBottom: "30%", width: "10rem", height: "10rem" }} role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                {this.state.nearestMostInfectedPersons.map((person, index) =>
-                                    <tr key={index}>
-                                        <td> {index + 1} </td>
-                                        <td> {person.name} </td>
-                                        <td> {person.address} </td>
-                                    </tr>
-                                )}
-                            </tbody>
-                        </table>
+                        }
                     </div>
                 </div>
             </div >

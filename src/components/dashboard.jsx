@@ -107,16 +107,24 @@ class Dashboard extends Component {
                                     </thead>
                                     <tbody>
                                         {
-                                            this.state.data.slice(0, 10).map((result, index) =>
-                                                <tr key={index}>
-                                                    <td> {index + 1} </td>
-                                                    <td> {result.ssn} </td>
-                                                    <td> {result.name} </td>
-                                                    <td> {result.address} </td>
-                                                    <td scope="row"> {Math.round(result.score * 100) / 100} </td>
-                                                    {result.risk}
+                                            this.state.data.length !== 0 ?
+                                                this.state.data.slice(0, 10).map((result, index) =>
+                                                    <tr key={index}>
+                                                        <td> {index + 1} </td>
+                                                        <td> {result.ssn} </td>
+                                                        <td> {result.name} </td>
+                                                        <td> {result.address} </td>
+                                                        <td scope="row"> {Math.round(result.score * 100) / 100} </td>
+                                                        {result.risk}
+                                                    </tr>
+                                                )
+                                                :
+                                                <tr class="text-center">
+                                                    <td colspan="5" class="spinner-border" style={{ color: "#4f5f76", marginTop: "30%", marginLeft: "130%", marginBottom: "30%", width: "10rem", height: "10rem" }} role="status">
+                                                        <span class="sr-only">Loading...</span>
+                                                    </td>
                                                 </tr>
-                                            )}
+                                        }
                                     </tbody>
                                 </table>
                             </div>
@@ -166,7 +174,7 @@ class Dashboard extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }
