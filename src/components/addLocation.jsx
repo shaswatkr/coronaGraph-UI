@@ -59,12 +59,11 @@ class AddLocation extends Component {
                 console.log(message);
             })
 
-        alert("Your response has been recorded Successfully!!\n Thank You..")
-
         if (param === "more")
             this.props.history.push('/dashboard/add3');
         else {
             localStorage.removeItem("ssn");
+            alert("Your response has been recorded Successfully!!\n Thank You..");
             this.props.history.push('/dashboard/');
         }
     }

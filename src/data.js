@@ -1954,245 +1954,245 @@ export const locationData = [
     }
 ]
 
-export const lat_long = [
+export const locData = [
     {
         "LocationId": "586264",
-        "Latitude": "28.6348",
-        "Longitude": "77.266721"
+        "Latitude": "28.6368",
+        "Longitude": "77.219785"
     },
     {
         "LocationId": "776458",
-        "Latitude": "28.6868",
-        "Longitude": "76.678721"
+        "Latitude": "28.6378",
+        "Longitude": "77.218721"
     },
     {
         "LocationId": "922061",
-        "Latitude": "29.6668",
-        "Longitude": "76.245721"
+        "Latitude": "28.6372",
+        "Longitude": "77.238721"
     },
     {
         "LocationId": "952805",
-        "Latitude": "28.6398",
-        "Longitude": "74.256721"
+        "Latitude": "28.6453",
+        "Longitude": "77.218721"
     },
     {
         "LocationId": "584199",
-        "Latitude": "28.6568",
-        "Longitude": "78.456721"
+        "Latitude": "26.6334",
+        "Longitude": "77.228721"
     },
     {
         "LocationId": "785687",
-        "Latitude": "29.6368",
-        "Longitude": "79.788721"
+        "Latitude": "28.633",
+        "Longitude": "77.218721"
     },
     {
         "LocationId": "304985",
-        "Latitude": "30.6368",
-        "Longitude": "78.356721"
+        "Latitude": "28.6345",
+        "Longitude": "78.012721"
     },
     {
         "LocationId": "751736",
-        "Latitude": "31.6368",
-        "Longitude": "77.416721"
+        "Latitude": "28.6375",
+        "Longitude": "77.213721"
     },
     {
         "LocationId": "388544",
-        "Latitude": "28.6898",
-        "Longitude": "77.816721"
+        "Latitude": "28.6321",
+        "Longitude": "77.214721"
     },
     {
         "LocationId": "619662",
-        "Latitude": "30.6768",
-        "Longitude": "77.898721"
+        "Latitude": "28.6338",
+        "Longitude": "77.215721"
     },
     {
         "LocationId": "755541",
-        "Latitude": "29.2368",
-        "Longitude": "76.256721"
+        "Latitude": "28.632",
+        "Longitude": "77.216721"
     },
     {
         "LocationId": "660331",
-        "Latitude": "28.1368",
-        "Longitude": "77.726721"
+        "Latitude": "28.6339",
+        "Longitude": "77.217721"
     },
     {
         "LocationId": "795672",
-        "Latitude": "27.8368",
-        "Longitude": "78.456721"
+        "Latitude": "27.6362",
+        "Longitude": "77.219721"
     },
     {
         "LocationId": "689182",
-        "Latitude": "28.7868",
-        "Longitude": "79.213421"
+        "Latitude": "28.6371",
+        "Longitude": "76.215621"
     },
     {
         "LocationId": "850628",
-        "Latitude": "28.6368",
-        "Longitude": "76.216721"
+        "Latitude": "28.6328",
+        "Longitude": "77.613421"
     },
     {
         "LocationId": "663758",
-        "Latitude": "29.9368",
-        "Longitude": "77.245721"
+        "Latitude": "28.6346",
+        "Longitude": "77.216721"
     },
     {
         "LocationId": "181013",
-        "Latitude": "27.1368",
-        "Longitude": "78.346721"
+        "Latitude": "28.6352",
+        "Longitude": "77.518921"
     },
     {
         "LocationId": "440083",
-        "Latitude": "32.6908",
-        "Longitude": "78.788721"
+        "Latitude": "28.6337",
+        "Longitude": "77.218221"
     },
     {
         "LocationId": "956337",
-        "Latitude": "33.6368",
-        "Longitude": "77.896721"
+        "Latitude": "28.6318",
+        "Longitude": "77.221921"
     },
     {
         "LocationId": "601969",
-        "Latitude": "34.6368",
-        "Longitude": "77.456721"
+        "Latitude": "26.6232",
+        "Longitude": "77.217521"
     },
     {
         "LocationId": "804160",
-        "Latitude": "27.5468",
-        "Longitude": "77.894721"
+        "Latitude": "28.5452",
+        "Longitude": "77.211521"
     },
     {
         "LocationId": "710936",
-        "Latitude": "27.6398",
-        "Longitude": "77.768721"
+        "Latitude": "28.5482",
+        "Longitude": "77.212521"
     },
     {
         "LocationId": "206056",
-        "Latitude": "30.6458",
-        "Longitude": "76.216721"
+        "Latitude": "28.5312",
+        "Longitude": "77.413521"
     },
     {
         "LocationId": "244906",
-        "Latitude": "31.6567",
-        "Longitude": "76.566721"
+        "Latitude": "28.5782",
+        "Longitude": "77.214521"
     },
     {
         "LocationId": "650815",
-        "Latitude": "29.5368",
-        "Longitude": "76.232721"
+        "Latitude": "28.5912",
+        "Longitude": "77.215521"
     },
     {
         "LocationId": "751369",
-        "Latitude": "28.4368",
-        "Longitude": "76.213421"
+        "Latitude": "27.5982",
+        "Longitude": "77.214521"
     },
     {
         "LocationId": "476911",
-        "Latitude": "28.3368",
-        "Longitude": "76.906721"
+        "Latitude": "28.6002",
+        "Longitude": "77.513521"
     },
     {
         "LocationId": "240861",
-        "Latitude": "28.2568",
-        "Longitude": "76.285721"
+        "Latitude": "28.6122",
+        "Longitude": "77.216521"
     },
     {
         "LocationId": "168057",
-        "Latitude": "28.5668",
-        "Longitude": "76.637421"
+        "Latitude": "28.6742",
+        "Longitude": "77.277521"
     },
     {
         "LocationId": "645352",
-        "Latitude": "28.3468",
-        "Longitude": "75.218821"
+        "Latitude": "28.7012",
+        "Longitude": "77.215521"
     },
     {
         "LocationId": "943953",
-        "Latitude": "26.3368",
-        "Longitude": "78.213421"
+        "Latitude": "27.6912",
+        "Longitude": "77.214521"
     },
     {
         "LocationId": "551997",
-        "Latitude": "29.9368",
-        "Longitude": "77.256721"
+        "Latitude": "28.6952",
+        "Longitude": "77.113521"
     },
     {
         "LocationId": "482480",
-        "Latitude": "27.8368",
-        "Longitude": "77.245721"
+        "Latitude": "28.6982",
+        "Longitude": "77.712521"
     },
     {
         "LocationId": "379072",
-        "Latitude": "28.8568",
-        "Longitude": "78.348721"
+        "Latitude": "28.6632",
+        "Longitude": "77.210521"
     },
     {
         "LocationId": "585083",
-        "Latitude": "32.6388",
-        "Longitude": "79.346721"
+        "Latitude": "28.6672",
+        "Longitude": "77.214521"
     },
     {
         "LocationId": "338615",
-        "Latitude": "29.3469",
-        "Longitude": "80.216721"
+        "Latitude": "28.6732",
+        "Longitude": "77.418521"
     },
     {
         "LocationId": "252727",
-        "Latitude": "32.6568",
-        "Longitude": "81.216721"
+        "Latitude": "29.6672",
+        "Longitude": "77.459521"
     },
     {
         "LocationId": "293721",
-        "Latitude": "27.7845",
-        "Longitude": "82.218721"
+        "Latitude": "29.6692",
+        "Longitude": "77.219521"
     },
     {
         "LocationId": "287017",
-        "Latitude": "30.5674",
-        "Longitude": "83.216721"
+        "Latitude": "29.6702",
+        "Longitude": "77.219521"
     },
     {
         "LocationId": "764890",
-        "Latitude": "29.4325",
-        "Longitude": "84.016721"
+        "Latitude": "29.6552",
+        "Longitude": "77.219521"
     },
     {
-        "LocationId": "703136",
-        "Latitude": "26.6468",
-        "Longitude": "84.256721"
+        "LocationId": "134608",
+        "Latitude": "28.6572",
+        "Longitude": "77.219521"
     },
     {
         "LocationId": "942222",
-        "Latitude": "30.3458",
-        "Longitude": "83.267721"
+        "Latitude": "28.6602",
+        "Longitude": "77.569521"
     },
     {
         "LocationId": "688986",
-        "Latitude": "28.2458",
-        "Longitude": "83.215621"
+        "Latitude": "29.6752",
+        "Longitude": "77.629521"
     },
     {
         "LocationId": "847117",
-        "Latitude": "28.7768",
-        "Longitude": "82.786721"
+        "Latitude": "29.6712",
+        "Longitude": "77.219521"
     },
     {
         "LocationId": "880750",
-        "Latitude": "28.8968",
-        "Longitude": "82.245721"
+        "Latitude": "29.6702",
+        "Longitude": "77.409521"
     },
     {
         "LocationId": "323376",
-        "Latitude": "28.3468",
-        "Longitude": "82.214521"
+        "Latitude": "28.6697",
+        "Longitude": "77.159521"
     },
     {
         "LocationId": "176625",
-        "Latitude": "29.7868",
-        "Longitude": "82.223721"
+        "Latitude": "29.6754",
+        "Longitude": "77.219521"
     },
     {
         "LocationId": "370919",
-        "Latitude": "30.3448",
-        "Longitude": "82.453421"
+        "Latitude": "29.6778",
+        "Longitude": "77.359521"
     }
 ]

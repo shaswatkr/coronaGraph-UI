@@ -8,8 +8,10 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.0",
     "cors-anywhere": "^0.4.3",
+    "google-maps-react": "^2.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-google-maps": "^9.4.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },

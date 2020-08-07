@@ -1,16 +1,87 @@
 import React, { Component } from "react";
+import { locData } from "../data"
 
 class Dashboard extends Component {
     state = {
-        tableData: []
+        highestScore: "",
+        data: [],
+        tableData: [],
+        loc: [],
+        locID: [],
+        coords: []
     };
 
     componentDidMount() {
+        this.addMapCoords();
+
         fetch("http://localhost:61089/api/Graph/getInfectedDetails")
             .then((res) => res.json())
             .then((result) => {
-                this.setState({ tableData: result });
+                console.log(result);
+                this.setState({
+                    tableData: result,
+                    highestScore: result[0].score
+                });
+                localStorage.setItem("highestScore", this.state.highestScore);
+
+                let data = [];
+                this.state.tableData.forEach((item) => {
+                    let risk;
+                    if (item.score <= (0.1 * this.state.highestScore)) {
+                        risk = <th className="text-success"> NO </th>;
+                    }
+                    else if ((item.score > (0.1 * this.state.highestScore)) && item.score <= (0.25 * this.state.highestScore)) {
+                        risk = <th className="text-info"> LOW </th>;
+                    }
+                    else if ((item.score > (0.25 * this.state.highestScore)) && item.score <= (0.5 * this.state.highestScore)) {
+                        risk = <th className="text-medium"> MEDIUM </th>;
+                    }
+                    else {
+                        risk = <th className="text-danger"> HIGH </th>;
+                    }
+
+                    const res = { ...item, risk };
+                    data = [...data, res];
+                });
+                this.setState({ data: data });
             });
+    }
+
+    addMapCoords = () => {
+        localStorage.removeItem("coords");
+
+        let loc = [];
+        locData.forEach((item) => {
+            const product = { ...item };
+            loc = [...loc, product];
+        });
+        this.setState({ loc: loc });
+
+        fetch("http://localhost:61089/api/Graph/GetMostInfectedLocation")
+            .then((res) => res.json())
+            .then((result) => {
+                console.log(result);
+                this.setState({ locID: result });
+
+                let tempLoc = [...this.state.loc];
+                this.state.locID.map(lID => {
+                    var lat, long;
+                    tempLoc.map(
+                        loc => {
+                            if (lID.locationId === loc.LocationId) {
+                                lat = loc.Latitude;
+                                long = loc.Longitude
+                            }
+                        }
+                    )
+                    this.setState({ coords: [...this.state.coords, { "lat": Number(lat), "lng": Number(long) }] });
+                })
+
+                localStorage.setItem("coords", JSON.stringify(this.state.coords));
+            })
+            .catch(({ message }) => {
+                console.log(message);
+            })
     }
 
     render() {
@@ -22,6 +93,7 @@ class Dashboard extends Component {
                             <div className="card-body">
                                 <h4 className="card-title"> Potential Corona Carriers </h4>
                                 <hr />
+                                <h6 class="card-subtitle mb-2 text-muted"> * Centrality - Measurement of a person's COVID19 spread </h6>
                                 <table className="table table-hover">
                                     <thead>
                                         <tr>
@@ -30,17 +102,19 @@ class Dashboard extends Component {
                                             <th scope="col"> Name </th>
                                             <th scope="col"> Address </th>
                                             <th scope="col"> Centrality </th>
+                                            <th scope="col"> Risk </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {
-                                            this.state.tableData.map((result, index) =>
+                                            this.state.data.slice(0, 10).map((result, index) =>
                                                 <tr key={index}>
                                                     <td> {index + 1} </td>
                                                     <td> {result.ssn} </td>
                                                     <td> {result.name} </td>
                                                     <td> {result.address} </td>
-                                                    <th scope="row"> {Math.round(result.score * 100) / 100} </th>
+                                                    <td scope="row"> {Math.round(result.score * 100) / 100} </td>
+                                                    {result.risk}
                                                 </tr>
                                             )}
                                     </tbody>
@@ -54,9 +128,24 @@ class Dashboard extends Component {
                             <div className=" card">
                                 <div className="card-body">
                                     <h5 className="card-title highlight font-weight-bold"> Covid Info - India </h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="card-link">Card link</a>
-                                    <a href="#" className="card-link">Another link</a>
+                                    <hr />
+
+                                    <table className="card-text table font-weight-bolder covidDetails">
+                                        <tbody>
+                                            <tr className="text-danger">
+                                                <th scope="col"> Confirmed </th>
+                                                <th scope="col"> 144 </th>
+                                            </tr>
+                                            <tr className="text-primary">
+                                                <th scope="col"> Active </th>
+                                                <th scope="col"> 115 </th>
+                                            </tr>
+                                            <tr className="text-success">
+                                                <th scope="col"> Recovered </th>
+                                                <th scope="col"> 29 </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -64,11 +153,14 @@ class Dashboard extends Component {
                         <div className="mt-4 row">
                             <div className="card">
                                 <div className="card-body">
-                                    <h5 className="card-title highlight font-weight-bold">Card title</h5>
-                                    <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" className="card-link">Card link</a>
-                                    <a href="#" className="card-link">Another link</a>
+                                    <h5 className="card-title highlight font-weight-bold"> Covid Prevention Guidelines </h5>
+                                    <hr />
+
+                                    <table className="card-text font-weight-bold table table-hover">
+                                        <tr><th> Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water. </th></tr>
+                                        <tr><th> Maintain at least 1 metre (3 feet) distance between yourself and others. </th></tr>
+                                        <tr><th> Stay home and self-isolate even with minor symptoms such as cough, headache, mild fever, until you recover. </th></tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>

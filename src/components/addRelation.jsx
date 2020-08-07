@@ -87,7 +87,7 @@ class AddRelation extends Component {
 
                             <div className="row">
                                 <button onClick={() => this.handleSubmit("more")} className="addMore col-md-6 button btn-block btn-lg" style={{ verticalAlign: "middle" }}><span> Add more </span></button>
-                                <button onClick={() => this.handleSubmit("done")} className="col-md button btn-block btn-lg btn-success" style={{ verticalAlign: "middle" }}><span> Proceed to Page 3 </span></button>
+                                <button onClick={() => this.handleSubmit("done")} className="col-md button btn-block btn-lg btn-success" style={{ verticalAlign: "middle" }}><span> Next </span></button>
                             </div>
                         </div>
                     </div>

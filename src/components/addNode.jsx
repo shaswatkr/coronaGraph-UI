@@ -69,7 +69,7 @@ class AddNode extends Component {
                 <div className="card">
                     <div className="card-body p-4">
                         <div className="was-validated">
-                            <h3 className="card-title"> Add new Node </h3>
+                            <h3 className="card-title"> Register new User </h3>
                             <hr />
 
                             <div className="form-row">
@@ -101,7 +101,7 @@ class AddNode extends Component {
                                     </select>
                                 </div>
 
-                                <div className="form-group col-md-4">
+                                <div className="form-group col-md">
                                     <label htmlFor="city"> City </label>
                                     <select name="city" className="custom-select" onChange={this.handleChange} disabled={this.state.state === "" ? true : false} required>
                                         {this.state.state === "" ?
@@ -111,11 +111,6 @@ class AddNode extends Component {
                                         }
                                     </select>
                                 </div>
-
-                                <div className="form-group col-md-2">
-                                    <label htmlFor="zip"> Zip </label>
-                                    <input type="text" className="form-control" name="zip" onChange={this.handleChange} required />
-                                </div>
                             </div>
 
                             <div className="form-row">
@@ -123,11 +118,11 @@ class AddNode extends Component {
                                     <label htmlFor="covidPositive"> Covid Infected?? </label>
                                     <div className="custom-control custom-radio">
                                         <input type="radio" className="custom-control-input" name="covidPositive" onChange={this.handleChange} value="TRUE" id="covidYes" required />
-                                        <label className="custom-control-label" htmlFor="covidYes"> True </label>
+                                        <label className="custom-control-label" htmlFor="covidYes"> Yes </label>
                                     </div>
                                     <div className="custom-control custom-radio mb-3">
                                         <input type="radio" className="custom-control-input" name="covidPositive" onChange={this.handleChange} value="FALSE" id="covidNo" required />
-                                        <label className="custom-control-label" htmlFor="covidNo"> False </label>
+                                        <label className="custom-control-label" htmlFor="covidNo"> No </label>
                                     </div>
                                 </div>
 
@@ -136,11 +131,11 @@ class AddNode extends Component {
                                     <label htmlFor="symptoms"> Showing Symptoms?? </label>
                                     <div className="custom-control custom-radio">
                                         <input type="radio" className="custom-control-input" name="symptoms" onChange={this.handleChange} value="TRUE" id="symptomsYes" required />
-                                        <label className="custom-control-label" htmlFor="symptomsYes"> True </label>
+                                        <label className="custom-control-label" htmlFor="symptomsYes"> Yes </label>
                                     </div>
                                     <div className="custom-control custom-radio">
                                         <input type="radio" className="custom-control-input" name="symptoms" onChange={this.handleChange} value="FALSE" id="symptomsNo" required />
-                                        <label className="custom-control-label" htmlFor="symptomsNo"> False </label>
+                                        <label className="custom-control-label" htmlFor="symptomsNo"> No </label>
                                     </div>
                                 </div>
                             </div>
@@ -152,7 +147,7 @@ class AddNode extends Component {
                                 </div>
                             </div>
 
-                            <button onClick={this.handleSubmit} className="button btn-block btn-lg" style={{ verticalAlign: "middle" }}><span> Proceed to Page 2 </span></button>
+                            <button onClick={this.handleSubmit} className="button btn-block btn-lg btn-success" style={{ verticalAlign: "middle" }}><span> Next </span></button>
                         </div>
                     </div>
                 </div>
