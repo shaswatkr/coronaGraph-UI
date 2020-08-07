@@ -168,6 +168,10 @@ class Dashboard extends Component {
                                         <tr><th> Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water. </th></tr>
                                         <tr><th> Maintain at least 1 metre (3 feet) distance between yourself and others. </th></tr>
                                         <tr><th> Stay home and self-isolate even with minor symptoms such as cough, headache, mild fever, until you recover. </th></tr>
+                                        <tr><th>
+                                            <a href="https://www.covid19india.org/" class="card-link ml-4"> COVID19 India </a>
+                                            <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" class="card-link mr-5 float-right"> WHO Public Advice </a>
+                                        </th></tr>
                                     </table>
                                 </div>
                             </div>
